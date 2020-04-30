@@ -7,7 +7,7 @@ import githubLogo from "../images/github.svg"
 import linkedinLogo from "../images/linkedin.svg"
 import twitterLogo from "../images/twitter.svg"
 
-const Navigation = styled.nav`
+const Nav = styled.nav`
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -49,10 +49,10 @@ const SocialIcon = styled.div`
   }
 `
 
-const Navigationigation = ({ showBackground = true }) => {
+const Navigation = ({ showBackground = true }) => {
   return (
     <>
-      <Navigation>
+      <Nav>
         <Logo>
           <StyledLink to="/">Ryan Smith</StyledLink>
         </Logo>
@@ -82,9 +82,9 @@ const Navigationigation = ({ showBackground = true }) => {
             </a>
           </SocialIcon>
         </SocialLinks>
-      </Navigation>
+      </Nav>
     </>
   )
 }
 
-export default Navigationigation
+export default Navigation
