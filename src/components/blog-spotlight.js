@@ -7,14 +7,13 @@ import Card from "../components/card"
 import Stack from "../components/stack"
 
 const BlogSpotlight = ({ children }) => {
-  const posts = useStaticQuery(
+  const {
+    allMarkdownRemark: {
+      edges: posts
+    }
+  } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
@@ -32,7 +31,7 @@ const BlogSpotlight = ({ children }) => {
         }
       }
     `
-  ).allMarkdownRemark.edges
+  )
 
   return (
     <Container>

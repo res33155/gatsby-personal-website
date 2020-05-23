@@ -12,6 +12,10 @@ const Container = styled.article`
 
 const Content = styled.div`
   padding: 25px;
+
+  & > * {
+    margin: 0 0 10px 0;
+  }
 `
 
 const Heading = styled.h3`
