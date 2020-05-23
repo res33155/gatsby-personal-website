@@ -1,6 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
+
+import Container from "../components/container"
 
 import devLogo from "../images/dev.svg"
 import githubLogo from "../images/github.svg"
@@ -33,10 +35,10 @@ const Logo = styled.div`
 
 const SocialLinks = styled.div`
   display: flex;
+  
 `
 
 const SocialIcon = styled.div`
-  padding: 10px;
 
   &:not(:first-of-type) {
     margin-left: 25px;
@@ -49,40 +51,46 @@ const SocialIcon = styled.div`
   }
 `
 
-const Navigation = ({ showBackground = true }) => {
+const IconImage = styled.img`
+  height: 20px;
+`
+
+const Navigation = () => {
   return (
     <>
-      <Nav>
-        <Logo>
-          <StyledLink to="/">Ryan Smith</StyledLink>
-        </Logo>
+      <Container>
+        <Nav>
+          <Logo>
+            <StyledLink to="/">Ryan Smith</StyledLink>
+          </Logo>
 
-        <SocialLinks>
-          <SocialIcon>
-            <a href="https://dev.to/ryansmith" aria-label="DEV Community">
-              <img src={devLogo} alt="DEV Community" />
-            </a>
-          </SocialIcon>
+          <SocialLinks>
+            <SocialIcon>
+              <a href="https://dev.to/ryansmith" aria-label="DEV Community">
+                <IconImage src={devLogo} alt="DEV Community" />
+              </a>
+            </SocialIcon>
 
-          <SocialIcon>
-            <a href="https://github.com/ryan3E0" aria-label="GitHub">
-              <img src={githubLogo} alt="GitHub" />
-            </a>
-          </SocialIcon>
+            <SocialIcon>
+              <a href="https://github.com/ryan3E0" aria-label="GitHub">
+                <IconImage src={githubLogo} alt="GitHub" />
+              </a>
+            </SocialIcon>
 
-          <SocialIcon>
-            <a href="https://www.linkedin.com/in/ryan-smith3/" aria-label="LinkedIn">
-              <img src={linkedinLogo} alt="LinkedIn" />
-            </a>
-          </SocialIcon>
+            <SocialIcon>
+              <a href="https://www.linkedin.com/in/ryan-smith3/" aria-label="LinkedIn">
+                <IconImage src={linkedinLogo} alt="LinkedIn" />
+              </a>
+            </SocialIcon>
 
-          <SocialIcon>
-            <a href="https://twitter.com/Ryan3E0" aria-label="Twitter">
-              <img src={twitterLogo} alt="Twitter" />
-            </a>
-          </SocialIcon>
-        </SocialLinks>
-      </Nav>
+            <SocialIcon>
+              <a href="https://twitter.com/Ryan3E0" aria-label="Twitter">
+                <IconImage src={twitterLogo} alt="Twitter" />
+              </a>
+            </SocialIcon>
+          </SocialLinks>
+        </Nav>
+      </Container>
     </>
   )
 }
