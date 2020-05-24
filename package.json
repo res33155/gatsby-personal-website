@@ -39,7 +39,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "build-test": "git clone git@github.com:ryan3E0/blog-content.git new-content && mv content old-content && mv new-content content && rm -i -rf old-content && gatsby build",
+    "build-test": "git clone https://gitlab.com/ryan3E0/blog-content.git/ new-content && mv content old-content && mv new-content content && rm -i -rf old-content && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
