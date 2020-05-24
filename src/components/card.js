@@ -25,6 +25,7 @@ const Heading = styled.h3`
 
 const Timestamp = styled.p`
   color: var(--gray-20);
+  font-size: 13px;
 `
 
 const Card = ({ heading, timestamp, content }) => {
