@@ -33,10 +33,13 @@ const StyledImage = styled(Img)`
   border-radius: 6px 6px 0 0;
 `
 
-const Card = ({ image, heading, timestamp, content }) => {
+const Card = ({ image, imageAltText, heading, timestamp, content }) => {
   return (
     <Container>
-      <StyledImage sizes={{ ...image, aspectRatio: 21 / 9 }} />
+      <StyledImage
+        sizes={{ ...image, aspectRatio: 21 / 9 }}
+        alt={imageAltText}
+      />
 
       <Content>
         <Timestamp>

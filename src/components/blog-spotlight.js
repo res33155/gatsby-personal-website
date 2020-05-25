@@ -25,7 +25,8 @@ const BlogSpotlight = ({ children }) => {
                 date(formatString: "MMMM D, YYYY")
                 title
                 description
-                cover {
+                coverImageAltText
+                coverImage {
                   childImageSharp {
                     fluid(maxWidth: 445) {
                       ...GatsbyImageSharpFluid
@@ -47,7 +48,8 @@ const BlogSpotlight = ({ children }) => {
       <Stack>
         {posts.map(({ node }) =>
           <Card
-            image={node.frontmatter.cover.childImageSharp.fluid}
+            image={node.frontmatter.coverImage.childImageSharp.fluid}
+            imageAltText={node.frontmatter.coverImageAltText}
             key={node.fields.slug}
             heading={node.frontmatter.title}
             timestamp={node.frontmatter.date}
