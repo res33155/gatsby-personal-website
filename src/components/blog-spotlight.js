@@ -22,9 +22,16 @@ const BlogSpotlight = ({ children }) => {
                 slug
               }
               frontmatter {
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "MMMM D, YYYY")
                 title
                 description
+                cover {
+                  childImageSharp {
+                    fluid(maxWidth: 445) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -38,19 +45,15 @@ const BlogSpotlight = ({ children }) => {
       <h2>Latest Posts</h2>
 
       <Stack>
-        {posts.map(({ node }) => {
-
-          return (
-            <>
-              <Card
-                key={node.fields.slug}
-                heading={node.frontmatter.title}
-                timestamp={node.frontmatter.date}
-                content={node.frontmatter.description || node.excerpt}
-              />
-            </>
-          )
-        })}
+        {posts.map(({ node }) =>
+          <Card
+            image={node.frontmatter.cover.childImageSharp.fluid}
+            key={node.fields.slug}
+            heading={node.frontmatter.title}
+            timestamp={node.frontmatter.date}
+            content={node.frontmatter.description || node.excerpt}
+          />
+        )}
       </Stack>
 
       {/* <p><Link to="#">View All Posts ></Link></p> */}

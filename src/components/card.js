@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const Container = styled.article`
   flex: 1 1 auto;
@@ -28,9 +29,15 @@ const Timestamp = styled.p`
   font-size: 13px;
 `
 
-const Card = ({ heading, timestamp, content }) => {
+const StyledImage = styled(Img)`
+  border-radius: 6px 6px 0 0;
+`
+
+const Card = ({ image, heading, timestamp, content }) => {
   return (
     <Container>
+      <StyledImage fluid={image} />
+
       <Content>
         <Timestamp>
           {timestamp}
