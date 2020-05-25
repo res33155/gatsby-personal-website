@@ -36,7 +36,7 @@ const StyledImage = styled(Img)`
 const Card = ({ image, heading, timestamp, content }) => {
   return (
     <Container>
-      <StyledImage fluid={image} />
+      <StyledImage sizes={{ ...image, aspectRatio: 21 / 9 }} />
 
       <Content>
         <Timestamp>
