@@ -54,8 +54,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Ryan Smith`,
+        short_name: `Ryan Smith`,
         start_url: `/`,
         background_color: `#f6f9fe`,
         theme_color: `#04152f`,
