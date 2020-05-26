@@ -1,8 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Container from "../components/container"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -15,40 +17,36 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
-          <h1>
-            {post.frontmatter.title}
-          </h1>
+      <Container>
+        <article>
+          <header>
+            <h1>
+              {post.frontmatter.title}
+            </h1>
+            <p>
+              {post.frontmatter.date}
+            </p>
+          </header>
+          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        </article>
+
+        <nav>
           <p>
-            {post.frontmatter.date}
-          </p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <footer>
-
-        </footer>
-      </article>
-
-      <nav>
-        <ul>
-          <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
-          </li>
-          <li>
+          </p>
+          <p>
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
-          </li>
-        </ul>
-      </nav>
+          </p>
+        </nav>
+      </Container>
     </Layout>
   )
 }
