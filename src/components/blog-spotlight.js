@@ -48,6 +48,7 @@ const BlogSpotlight = ({ children }) => {
       <Stack>
         {posts.map(({ node }) =>
           <Card
+            link={node.fields.slug}
             image={node.frontmatter.coverImage.childImageSharp.fluid}
             imageAltText={node.frontmatter.coverImageAltText}
             key={node.fields.slug}

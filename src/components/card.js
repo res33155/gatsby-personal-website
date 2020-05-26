@@ -1,6 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: var(--black);
+  display: flex;
+`
 
 const Container = styled.article`
   flex: 1 1 auto;
@@ -33,25 +40,29 @@ const StyledImage = styled(Img)`
   border-radius: 6px 6px 0 0;
 `
 
-const Card = ({ image, imageAltText, heading, timestamp, content }) => {
+const Card = ({ link, image, imageAltText, heading, timestamp, content }) => {
   return (
-    <Container>
-      <StyledImage
-        sizes={{ ...image, aspectRatio: 21 / 9 }}
-        alt={imageAltText}
-      />
+    <>
+      <StyledLink to={link}>
+        <Container>
+          <StyledImage
+            sizes={{ ...image, aspectRatio: 21 / 9 }}
+            alt={imageAltText}
+          />
 
-      <Content>
-        <Timestamp>
-          {timestamp}
-        </Timestamp>
+          <Content>
+            <Timestamp>
+              {timestamp}
+            </Timestamp>
 
-        <Heading>{heading}</Heading>
+            <Heading>{heading}</Heading>
 
 
-        <p>{content}</p>
-      </Content>
-    </Container>
+            <p>{content}</p>
+          </Content>
+        </Container>
+      </StyledLink>
+    </>
   )
 }
 
