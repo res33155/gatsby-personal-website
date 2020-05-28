@@ -1,8 +1,6 @@
 import React from "react"
 import styled, { createGlobalStyle } from 'styled-components'
 
-import Header from "../components/header"
-
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -84,10 +82,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <>
       <GlobalStyle />
-      <PageWrapper>
-        <Header />
-        <main>{children}</main>
-      </PageWrapper>
+      {children}
     </>
   )
 }

@@ -1,10 +1,17 @@
 import React from "react"
+import styled from 'styled-components'
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Container from "../components/container"
+import Layout from "../components/layouts/layout"
+import SEO from "../components/elements/seo"
+import Container from "../components/elements/container"
+import Stack from "../components/elements/stack"
+import Navigation from "../components/sections/navigation"
+
+const CoverImage = styled(Img)`
+  border-radius: 6px;
+`
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -17,35 +24,43 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Navigation />
       <Container>
-        <article>
-          <header>
-            <h1>
-              {post.frontmatter.title}
-            </h1>
-            <p>
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        </article>
+        <Stack>
+          <CoverImage
+            sizes={{ ...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
+            alt={post.frontmatter.coverImageAltText}
+          />
 
-        <nav>
-          <p>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </p>
-          <p>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </p>
-        </nav>
+          <article>
+            <header>
+              <h1>
+                {post.frontmatter.title}
+              </h1>
+              <p>
+                {post.frontmatter.date}
+              </p>
+            </header>
+            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          </article>
+
+          <nav>
+            <p>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </p>
+            <p>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </p>
+          </nav>
+        </Stack>
       </Container>
     </Layout>
   )
@@ -68,6 +83,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        coverImageAltText
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 950) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

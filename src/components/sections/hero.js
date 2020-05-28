@@ -6,6 +6,8 @@ const HeroContainer = styled.div`
   flex-direction: column;
   text-align: center;
   padding: 25px 0 50px 0;
+  background: var(--blue-10);
+  color: var(--white);
 
   @media (max-width: 576px) {
     display: flex;

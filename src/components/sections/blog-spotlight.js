@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import Container from "../components/container"
-import Card from "../components/card"
-import Stack from "../components/stack"
+import Container from "../elements/container"
+import Card from "../elements/card"
+import Grid from "../elements/grid"
 
 const BlogSpotlight = ({ children }) => {
   const {
@@ -45,7 +45,7 @@ const BlogSpotlight = ({ children }) => {
     <Container>
       <h2>Latest Posts</h2>
 
-      <Stack>
+      <Grid>
         {posts.map(({ node }) =>
           <Card
             link={node.fields.slug}
@@ -57,7 +57,7 @@ const BlogSpotlight = ({ children }) => {
             content={node.frontmatter.description || node.excerpt}
           />
         )}
-      </Stack>
+      </Grid>
 
       {/* <p><Link to="#">View All Posts ></Link></p> */}
     </Container>

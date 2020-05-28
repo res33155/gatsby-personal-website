@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-const Container = styled.div`
+const StackContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
   & > * {
     margin: 0 15px 25px 15px;
@@ -14,11 +13,11 @@ const Container = styled.div`
   }
 `
 
-const Stack = ({ children }) => {
+const Stack = ({ children, direction = "vertical" }) => {
   return (
-    <Container>
+    <StackContainer>
       {children}
-    </Container>
+    </StackContainer>
   )
 }
 

@@ -6,6 +6,6 @@ coverImage: cover.jpg
 coverImageAltText: Red panda sleeping
 ---
 
-This is my first post.
+![Red panda sleeping](./cover.jpg)
 
-![image](./cover.jpg)
+This is my first post.
