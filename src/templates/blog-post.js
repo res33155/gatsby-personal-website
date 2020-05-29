@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layouts/layout"
 import SEO from "../components/elements/seo"
 import Container from "../components/elements/container"
-import Stack from "../components/elements/stack"
+import Spacer from "../components/elements/spacer"
 import Navigation from "../components/sections/navigation"
 
 const CoverImage = styled(Img)`
@@ -24,27 +24,28 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+
       <Navigation />
+      <Spacer />
       <Container>
-        <Stack>
-          <CoverImage
-            sizes={{ ...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
-            alt={post.frontmatter.coverImageAltText}
-          />
+        <CoverImage
+          sizes={{ ...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
+          alt={post.frontmatter.coverImageAltText}
+        />
 
-          <article>
-            <header>
-              <h1>
-                {post.frontmatter.title}
-              </h1>
-              <p>
-                {post.frontmatter.date}
-              </p>
-            </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          </article>
+        <article>
+          <header>
+            <h1>
+              {post.frontmatter.title}
+            </h1>
+            <p>
+              {post.frontmatter.date}
+            </p>
+          </header>
+          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        </article>
 
-          <nav>
+        {/* <nav>
             <p>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
@@ -59,9 +60,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 </Link>
               )}
             </p>
-          </nav>
-        </Stack>
+          </nav> */}
       </Container>
+
     </Layout>
   )
 }

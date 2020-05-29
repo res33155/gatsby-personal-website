@@ -20,7 +20,7 @@ const NavContainer = styled.div`
 `
 
 const Nav = styled.nav`
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,22 +30,23 @@ const Nav = styled.nav`
   @media (max-width: 576px) {
     flex-direction: column;
     height: unset;
-    padding-top: 25px;
+    padding: 15px 0 15px 0;
   }
 `
 
 const StyledLink = styled(Link)`
   color: var(--white);
   text-decoration: none;
+  
 `
 
 const Logo = styled.div`
   font-size: 24px;
+  
 `
 
 const SocialLinks = styled.div`
   display: flex;
-  
 `
 
 const SocialIcon = styled.div`
@@ -62,14 +63,14 @@ const SocialIcon = styled.div`
 `
 
 const IconImage = styled.img`
-  height: 20px;
+  height: 18px;
 `
 
 const Navigation = () => {
   return (
     <>
-      <PageHighlight />
       <NavContainer>
+        <PageHighlight />
         <Container>
           <Nav>
             <Logo>
