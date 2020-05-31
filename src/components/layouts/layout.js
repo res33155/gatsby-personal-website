@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     --gray-90: hsl(0, 0%, 90%);
     --gray-95: hsl(0, 0%, 95%);
     --gray-98: hsl(0, 0%, 98%);
-    --white: hsl(0, 0%, 100%);
+    --white: #fafafa;
     --black: hsl(0, 0, 10%);
 
     --text-shadow: 0px 1px 1px hsla(var(--blue-5-base), 0.25);

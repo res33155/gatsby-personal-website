@@ -9,8 +9,29 @@ import Container from "../components/elements/container"
 import Spacer from "../components/elements/spacer"
 import Navigation from "../components/sections/navigation"
 
-const CoverImage = styled(Img)`
+const Post = styled.div`
+  background-color: var(--white);
   border-radius: 6px;
+  box-shadow: var(--medium-shadow);
+`
+
+const PostContent = styled.div`
+  padding: 25px;
+  
+  a {
+      text-decoration: none;
+      color: var(--green-30);
+      border-bottom: 1px solid var(--green-80);
+    }
+
+  a:hover {
+    /* color: var(--green-20); */
+    border-bottom-color: var(--green-30);
+  }
+`
+
+const CoverImage = styled(Img)`
+  border-radius: 6px 6px 0 0;
 `
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -28,24 +49,26 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Navigation />
       <Spacer />
       <Container>
-        <CoverImage
-          sizes={{ ...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
-          alt={post.frontmatter.coverImageAltText}
-        />
+        <Post>
+          <CoverImage
+            sizes={{ ...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
+            alt={post.frontmatter.coverImageAltText}
+          />
 
-        <article>
-          <header>
-            <h1>
-              {post.frontmatter.title}
-            </h1>
-            <p>
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        </article>
+          <PostContent>
+            <article>
+              <header>
+                <h1>
+                  {post.frontmatter.title}
+                </h1>
+                <p>
+                  {post.frontmatter.date}
+                </p>
+              </header>
+              <section dangerouslySetInnerHTML={{ __html: post.html }} />
+            </article>
 
-        {/* <nav>
+            {/* <nav>
             <p>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
@@ -61,6 +84,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               )}
             </p>
           </nav> */}
+          </PostContent>
+        </Post>
+        <Spacer />
       </Container>
 
     </Layout>
