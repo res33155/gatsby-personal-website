@@ -26,7 +26,7 @@ const Paragraph = styled.p`
   width: 40%;
   margin: auto;
   color: var(--blue-80);
-  font-size: 18px;
+  font-size: 16px;
 
   @media (max-width: 576px) {
     width: 80%;
