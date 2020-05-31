@@ -27,6 +27,11 @@ const PostContent = styled.div`
   a:hover {
     border-bottom-color: var(--green-20);
   }
+
+  img {
+    border-radius: 3px;
+    border: 1px solid var(--gray-5);
+  }
 `
 
 const CoverImage = styled(Img)`
