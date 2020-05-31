@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layouts/layout"
@@ -20,13 +20,12 @@ const PostContent = styled.div`
   
   a {
       text-decoration: none;
-      color: var(--green-30);
+      color: var(--green-20);
       border-bottom: 1px solid var(--green-80);
     }
 
   a:hover {
-    /* color: var(--green-20); */
-    border-bottom-color: var(--green-30);
+    border-bottom-color: var(--green-20);
   }
 `
 
