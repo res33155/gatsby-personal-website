@@ -20,8 +20,8 @@ const PostContent = styled.div`
   
   a {
       text-decoration: none;
-      color: var(--green-20);
-      border-bottom: 1px solid var(--green-80);
+      color: var(--green-2);
+      border-bottom: 1px solid var(--green-3);
     }
 
   a:hover {
@@ -30,7 +30,7 @@ const PostContent = styled.div`
 
   img {
     border-radius: 3px;
-    border: 1px solid var(--gray-5);
+    border: 1px solid var(--gray-1);
   }
 `
 

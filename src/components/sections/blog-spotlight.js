@@ -6,6 +6,11 @@ import Container from "../elements/container"
 import Card from "../elements/card"
 import Grid from "../elements/grid"
 
+const SectionHeading = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 600;
+`
+
 const BlogSpotlight = ({ children }) => {
   const {
     allMarkdownRemark: {
@@ -43,7 +48,7 @@ const BlogSpotlight = ({ children }) => {
 
   return (
     <Container>
-      <h2>Latest Posts</h2>
+      <SectionHeading>Latest Posts</SectionHeading>
 
       <Grid>
         {posts.map(({ node }) =>

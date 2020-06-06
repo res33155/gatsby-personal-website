@@ -13,7 +13,7 @@ const Container = styled.article`
   flex: 1 1 auto;
   border-radius: 6px;
   box-shadow: var(--medium-shadow);
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--black);
   background: var(--white);
 `
@@ -27,13 +27,15 @@ const Content = styled.div`
 `
 
 const Heading = styled.h3`
-  color: var(--blue-40);
-  font-size: 20px;
+  color: var(--blue-3);
+  font-size: 1.25rem;
+  font-weight: 600;
 `
 
 const Timestamp = styled.p`
   color: var(--gray-20);
-  font-size: 13px;
+  font-size: 0.90rem;
+
 `
 
 const StyledImage = styled(Img)`

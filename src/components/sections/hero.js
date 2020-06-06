@@ -6,7 +6,7 @@ const HeroContainer = styled.div`
   flex-direction: column;
   text-align: center;
   padding: 30px 0 60px 0;
-  background: var(--blue-10);
+  background: var(--blue-2);
   color: var(--white);
 
   @media (max-width: 576px) {
@@ -17,7 +17,7 @@ const HeroContainer = styled.div`
 `
 
 const Heading = styled.h1`
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: unset;
 `
@@ -25,8 +25,7 @@ const Heading = styled.h1`
 const Paragraph = styled.p`
   width: 40%;
   margin: auto;
-  color: var(--blue-80);
-  font-size: 16px;
+  color: var(--blue-4);
 
   @media (max-width: 576px) {
     width: 80%;

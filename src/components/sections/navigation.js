@@ -10,12 +10,12 @@ import linkedinLogo from "../../images/linkedin.svg"
 import twitterLogo from "../../images/twitter.svg"
 
 const PageHighlight = styled.div`
-  background: var(--green-50);
+  background: var(--green-3);
   height: 3px;
 `
 
 const NavContainer = styled.div`
-  background: var(--blue-10);
+  background: var(--blue-2);
   color: var(--white);
 `
 
@@ -24,7 +24,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--blue-10);
+  background-color: var(--blue-2);
   color: var(--white);
   
   @media (max-width: 576px) {
@@ -41,7 +41,7 @@ const StyledLink = styled(Link)`
 `
 
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   
 `
 
