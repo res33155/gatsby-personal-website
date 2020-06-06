@@ -33,7 +33,7 @@ const Heading = styled.h3`
 `
 
 const Timestamp = styled.p`
-  color: var(--gray-20);
+  color: var(--gray-3);
   font-size: 0.90rem;
 
 `
