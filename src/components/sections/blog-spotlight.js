@@ -9,6 +9,7 @@ import Grid from "../elements/grid"
 const SectionHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
+  color: var(--blue-2);
 `
 
 const BlogSpotlight = ({ children }) => {

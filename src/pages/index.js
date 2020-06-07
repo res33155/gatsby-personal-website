@@ -6,7 +6,7 @@ import Navigation from "../components/sections/navigation"
 import Hero from "../components/sections/hero"
 import BlogSpotlight from "../components/sections/blog-spotlight"
 
-const BlogIndex = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Index
 
 
 export const pageQuery = graphql`
