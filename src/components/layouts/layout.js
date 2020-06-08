@@ -45,40 +45,7 @@ const GlobalStyle = createGlobalStyle`
       0px 10px 25px hsla(var(--blue-1-base), 0.25);
     }
 
-    p {
-      margin-bottom: 1.25rem;
-    }
 
-    h1, h2, h3, h4, h6, h6 {
-      margin: 2.75rem 0 1.25rem;
-      font-weight: 400;
-      line-height: 1.25;
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    h3 {
-      font-size: 1.75rem;
-    }
-
-    h4 {
-      font-size: 1.5rem;
-    }
-
-    h5 {
-      font-size: 1.25rem;
-    }
-
-    h6 {
-      font-size: 1.05rem;
-    }
 `
 
 const Layout = ({ location, title, children }) => {

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -8,6 +8,43 @@ import SEO from "../components/elements/seo"
 import Container from "../components/elements/container"
 import Spacer from "../components/elements/spacer"
 import Navigation from "../components/sections/navigation"
+
+const Typography = createGlobalStyle`
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    h1, h2, h3, h4, h6, h6 {
+      margin: 2.75rem 0 1.25rem;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    h6 {
+      font-size: 1.05rem;
+    }
+`
 
 const Post = styled.div`
   background-color: var(--white);
@@ -44,9 +81,6 @@ const PostNavigation = styled.nav`
   text-align: center;
   height: 5rem;
   align-content: center;
-  background-color: var(--gray-5);
-  border-radius: 6px;
-  box-shadow: var(--small-shadow);
 `
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -56,6 +90,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Typography />
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -111,25 +146,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 )}
               </p>
             </PostNavigation>
-
-            {/* <nav>
-              <p>
-                {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                )}
-              </p>
-              <p>
-                {next && (
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                )}
-              </p>
-            </nav> */}
-
-
           </PostContent>
         </Post>
         <Spacer />
