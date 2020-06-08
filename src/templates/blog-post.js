@@ -10,40 +10,40 @@ import Spacer from "../components/elements/spacer"
 import Navigation from "../components/sections/navigation"
 
 const Typography = createGlobalStyle`
-    p {
-      margin-bottom: 1.25rem;
-    }
+  p {
+    margin-bottom: 1.25rem;
+  }
 
-    h1, h2, h3, h4, h6, h6 {
-      margin: 2.75rem 0 1.25rem;
-      font-weight: 400;
-      line-height: 1.25;
-    }
+  h1, h2, h3, h4, h6, h6 {
+    margin: 2.75rem 0 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+  }
 
-    h1 {
-      margin-top: 0;
-      font-size: 2.5rem;
-    }
+  h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
 
-    h2 {
-      font-size: 2rem;
-    }
+  h2 {
+    font-size: 2rem;
+  }
 
-    h3 {
-      font-size: 1.75rem;
-    }
+  h3 {
+    font-size: 1.75rem;
+  }
 
-    h4 {
-      font-size: 1.5rem;
-    }
+  h4 {
+    font-size: 1.5rem;
+  }
 
-    h5 {
-      font-size: 1.25rem;
-    }
+  h5 {
+    font-size: 1.25rem;
+  }
 
-    h6 {
-      font-size: 1.05rem;
-    }
+  h6 {
+    font-size: 1.05rem;
+  }
 `
 
 const Post = styled.div`

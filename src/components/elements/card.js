@@ -45,7 +45,7 @@ const StyledImage = styled(Img)`
 const Card = ({ link, image, imageAltText, heading, timestamp, content }) => {
   return (
     <>
-      <StyledLink to={link}>
+      <StyledLink to={link} aria-label={heading}>
         <Container>
           <StyledImage
             sizes={{ ...image, aspectRatio: 21 / 9 }}
