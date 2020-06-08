@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layouts/layout"
@@ -38,6 +38,17 @@ const CoverImage = styled(Img)`
   border-radius: 6px 6px 0 0;
 `
 
+const PostNavigation = styled.nav`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  height: 5rem;
+  align-content: center;
+  background-color: var(--gray-5);
+  border-radius: 6px;
+  box-shadow: var(--small-shadow);
+`
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
@@ -72,22 +83,53 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <section dangerouslySetInnerHTML={{ __html: post.html }} />
             </article>
 
+            <PostNavigation>
+              <p>
+                {next && (
+                  <>
+                    <small>Next Post</small>
+
+                    <br />
+
+                    <Link to={next.fields.slug} rel="next">
+                      ← {next.frontmatter.title}
+                    </Link>
+                  </>
+                )}
+              </p>
+
+              <p>
+                {previous && (
+                  <>
+                    <small>Previous Post</small>
+
+                    <br />
+                    <Link to={previous.fields.slug} rel="prev">
+                      {previous.frontmatter.title} →
+                    </Link>
+                  </>
+                )}
+              </p>
+            </PostNavigation>
+
             {/* <nav>
-            <p>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </p>
-            <p>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </p>
-          </nav> */}
+              <p>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </p>
+              <p>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </p>
+            </nav> */}
+
+
           </PostContent>
         </Post>
         <Spacer />

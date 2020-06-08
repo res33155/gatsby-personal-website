@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     --gray-2: hsl(0, 0%, 10%);
     --gray-3: hsl(0, 0%, 40%);
     --gray-4: hsl(0, 0%, 80%);
-    --gray-5: hsl(0, 0%, 98%);
+    --gray-5: hsl(0, 0%, 95%);
     
     --white: hsl(0, 0%, 98%);
     --black: hsl(200, 18%, 26%);
