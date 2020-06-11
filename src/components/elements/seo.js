@@ -31,8 +31,12 @@ const SEO = ({ description, lang, meta, title }) => {
       titleTemplate={`%s - ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `monetization`,
+          content: '$ilp.uphold.com/pFKqX3kKLNdL',
+        },
+        {
           name: `description`,
-          content: metaDescription,
+          content: description,
         },
         {
           property: `og:title`,
