@@ -12,7 +12,7 @@ const SectionHeading = styled.h2`
   color: var(--blue-2);
 `
 
-const BlogSpotlight = ({ children }) => {
+const BlogSpotlight = () => {
   const {
     allMarkdownRemark: {
       edges: posts
@@ -54,13 +54,13 @@ const BlogSpotlight = ({ children }) => {
       <Grid>
         {posts.map(({ node }) =>
           <Card
-            link={node.fields.slug}
-            image={node.frontmatter.coverImage.childImageSharp.fluid}
+            content={node.frontmatter.description}
+            heading={node.frontmatter.title}
+            image={node?.frontmatter?.coverImage?.childImageSharp?.fluid}
             imageAltText={node.frontmatter.coverImageAltText}
             key={node.fields.slug}
-            heading={node.frontmatter.title}
+            link={node.fields.slug}
             timestamp={node.frontmatter.date}
-            content={node.frontmatter.description || node.excerpt}
           />
         )}
       </Grid>

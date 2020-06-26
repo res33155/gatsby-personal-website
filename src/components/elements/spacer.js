@@ -5,7 +5,7 @@ const Space = styled.div`
   margin-bottom: 15px;
 `
 
-const Spacer = ({ children, direction = "vertical" }) => {
+const Spacer = () => {
   return (
     <Space />
   )
