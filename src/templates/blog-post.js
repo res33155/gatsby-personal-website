@@ -101,7 +101,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Container>
         <Post>
           <CoverImage
-            sizes={{ ...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
+            sizes={{ ...post?.frontmatter?.coverImage?.childImageSharp?.fluid, aspectRatio: 21 / 9 }}
             alt={post.frontmatter.coverImageAltText}
           />
 
