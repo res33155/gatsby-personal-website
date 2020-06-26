@@ -11,6 +11,7 @@ import Navigation from "../components/sections/navigation"
 
 const Typography = createGlobalStyle`
   p {
+    margin-top: 1.25rem;
     margin-bottom: 1.25rem;
   }
 
@@ -43,6 +44,21 @@ const Typography = createGlobalStyle`
 
   h6 {
     font-size: 1.05rem;
+  }
+
+  ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
+  ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+    li > p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 `
 
