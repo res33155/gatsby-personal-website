@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "esnext",
+		"checkJs": true,
+		"lib": [
+			"esnext"
+		],
+		"jsx": "react"
+	},
+	"exclude": [
+		"node_modules"
+	]
+}
