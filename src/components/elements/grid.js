@@ -6,7 +6,7 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
 
   & > * {
-    margin: 0 15px 25px 15px;
+    margin: 0 25px 50px 25px;
   }
 
   @media (max-width: 768px) {

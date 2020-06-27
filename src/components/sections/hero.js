@@ -5,7 +5,7 @@ const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 30px 0 60px 0;
+  padding: 25px 0 75px 0;
   background: var(--blue-2);
   color: var(--white);
 

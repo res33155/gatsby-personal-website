@@ -20,7 +20,7 @@ const NavContainer = styled.div`
 `
 
 const Nav = styled.nav`
-  height: 60px;
+  height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
