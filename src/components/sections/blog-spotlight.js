@@ -87,7 +87,7 @@ const BlogSpotlight = () => {
     <Container>
       <Heading my={3}>Latest Posts</Heading>
 
-      <Grid gridGap={3} gridTemplateColumns={[null, "1fr", "1fr 1fr"]} m={3}>
+      <Grid gridGap={3} gridTemplateColumns={[null, "1fr", "1fr 1fr"]} my={3}>
         {posts.map(({ node }) =>
           <Card
             content={node.frontmatter.description}
