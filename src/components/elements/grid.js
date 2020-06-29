@@ -6,7 +6,7 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
 
   & > * {
-    margin: 0 25px 50px 25px;
+    margin: 0 25px 0 25px;
   }
 
   @media (max-width: 768px) {
@@ -14,7 +14,7 @@ const Container = styled.div`
   }
 `
 
-const Grid = ({ children, direction = "vertical" }) => {
+const Grid = ({ children }) => {
   return (
     <Container>
       {children}

@@ -1,5 +1,5 @@
 import React from "react"
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -44,15 +44,20 @@ const GlobalStyle = createGlobalStyle`
     --large-shadow: 0px 5px 5px hsla(var(--blue-1-base), 0.25),
       0px 10px 25px hsla(var(--blue-1-base), 0.25);
     }
-
-
 `
+
+const theme = {
+  breakpoints: ['576px', '768px', '1024px'],
+  space: ["5px", "10px", "15px", "25px", "50px", "75px"]
+}
 
 const Layout = ({ location, title, children }) => {
   return (
     <>
-      <GlobalStyle />
-      {children}
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
     </>
   )
 }

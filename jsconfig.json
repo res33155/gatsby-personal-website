@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "esnext",
-		"checkJs": true,
+		"checkJs": false,
 		"lib": [
 			"esnext"
 		],
