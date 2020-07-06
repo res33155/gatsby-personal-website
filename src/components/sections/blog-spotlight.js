@@ -1,24 +1,18 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import { grid, space } from 'styled-system'
 
 import Container from "../elements/container"
 import Card from "../elements/card"
-
-const Grid = styled.div`
-  display: grid;
-  ${grid}
-  ${space}
-`
+import Grid from "../elements/grid"
+import Spacer from "../elements/spacer"
 
 const Heading = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.025rem;
-  color: var(--blue-2);
-  margin: 0;
-  ${space}
+  color: var(--gray-900);
+  text-align: center;
 `
 
 // const Button = styled(Link)`
@@ -33,7 +27,7 @@ const Heading = styled.h2`
 //   text-transform: none;
 //   background-image: none;
 //   cursor: pointer;
-//   background-color: var(--blue-3);
+//   background-color: var(--blue-700);
 //   border-radius: .25rem;
 //   display: inline-block;
 //   line-height: 1;
@@ -85,9 +79,11 @@ const BlogSpotlight = () => {
 
   return (
     <Container>
-      <Heading my={3}>Latest Posts</Heading>
+      <Spacer />
+      <Heading>Latest Posts</Heading>
+      <Spacer />
 
-      <Grid gridGap={3} gridTemplateColumns={[null, "1fr", "1fr 1fr"]} my={3}>
+      <Grid>
         {posts.map(({ node }) =>
           <Card
             content={node.frontmatter.description}
@@ -100,8 +96,10 @@ const BlogSpotlight = () => {
           />
         )}
       </Grid>
+      <Spacer />
 
       {/* <AllPostsButton to="/blog">View All</AllPostsButton> */}
+      {/* <Spacer /> */}
     </Container>
   )
 }

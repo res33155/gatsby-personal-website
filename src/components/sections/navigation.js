@@ -10,27 +10,25 @@ import linkedinLogo from "../../images/linkedin.svg"
 import twitterLogo from "../../images/twitter.svg"
 
 const PageHighlight = styled.div`
-  background: var(--green-3);
+  background: var(--green-500);
   height: 3px;
 `
 
 const NavContainer = styled.div`
-  background: var(--blue-2);
+  background: var(--blue-900);
   color: var(--white);
 `
 
 const Nav = styled.nav`
-  height: 75px;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--blue-2);
+  background-color: var(--blue-900);
   color: var(--white);
   
   @media (max-width: 576px) {
     flex-direction: column;
-    height: unset;
-    padding: 15px 0 15px 0;
   }
 `
 
@@ -42,7 +40,6 @@ const StyledLink = styled(Link)`
 
 const Logo = styled.div`
   font-size: 1.25rem;
-  
 `
 
 const SocialLinks = styled.div`

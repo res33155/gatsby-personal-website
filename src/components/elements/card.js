@@ -22,20 +22,18 @@ const Content = styled.div`
   padding: 25px;
 
   & > * {
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
   }
 `
 
 const Heading = styled.h3`
-  color: var(--blue-3);
-  font-size: 1.25rem;
-  font-weight: 600;
+  color: var(--blue-600);
+  font-size: 1rem;
+  font-weight: 500;
 `
 
 const Timestamp = styled.p`
-  color: var(--gray-3);
-  font-size: 0.90rem;
-
+  color: var(--gray-600);
 `
 
 const StyledImage = styled(Img)`

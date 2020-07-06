@@ -3,10 +3,11 @@ import styled from "styled-components"
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
 
-  & > * {
-    margin: 0 25px 0 25px;
+  @media (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (max-width: 768px) {

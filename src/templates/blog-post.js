@@ -73,17 +73,18 @@ const PostContent = styled.div`
   
   a {
       text-decoration: none;
-      color: var(--green-2);
-      border-bottom: 1px solid var(--green-3);
+      color: var(--green-700);
+      border-bottom: 1px solid var(--green-400);
     }
 
   a:hover {
-    border-bottom-color: var(--green-20);
+    color: var(--green-600);
+    border-bottom-color: var(--green-300);
   }
 
   img {
     border-radius: 3px;
-    border: 1px solid var(--gray-1);
+    border: 1px solid var(--gray-200);
   }
 `
 
