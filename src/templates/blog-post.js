@@ -115,7 +115,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
       <Navigation />
       <Spacer />
-      <Container>
+      <Container size="small">
         <Post>
           <CoverImage
             sizes={{ ...post?.frontmatter?.coverImage?.childImageSharp?.fluid, aspectRatio: 21 / 9 }}
@@ -192,7 +192,7 @@ export const pageQuery = graphql`
         coverImageAltText
         coverImage {
           childImageSharp {
-            fluid(maxWidth: 950) {
+            fluid(maxWidth: 768) {
               ...GatsbyImageSharpFluid
             }
           }
