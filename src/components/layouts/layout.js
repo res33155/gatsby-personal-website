@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -64,6 +65,15 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ location, title, children }) => {
   return (
     <>
+      <Helmet
+        script={[
+          {
+            type: "module",
+            src: 'https://unpkg.com/ionicons/dist/ionicons/ionicons.esm.js'
+          }
+        ]}
+      />
+
       <GlobalStyle />
       {children}
     </>

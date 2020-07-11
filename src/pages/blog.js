@@ -5,15 +5,8 @@ import styled from "styled-components"
 import Layout from "../components/layouts/layout"
 import SEO from "../components/elements/seo"
 import Navigation from "../components/sections/navigation"
-import Hero from "../components/sections/hero"
-import BlogSpotlight from "../components/sections/blog-spotlight"
-import Button from "../components/elements/button"
+import BlogListing from "../components/sections/blog-listing"
 import Spacer from "../components/elements/spacer"
-
-const AlignedContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
 
 const Heading = styled.h2`
   font-size: 1.5rem;
@@ -23,35 +16,25 @@ const Heading = styled.h2`
   text-align: center;
 `
 
-
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <>
-      <Layout location={location} title={siteTitle}>
-        <SEO title="Home" />
-        <Navigation />
-        <Hero />
-        <Spacer />
+    <Layout location={location} title={siteTitle}>
+      <SEO title="Blog" />
+      <Navigation />
+      <Spacer />
 
-        <Heading>Latest Blog Posts</Heading>
-        <Spacer />
+      <Heading>Blog Posts</Heading>
+      <Spacer />
 
-        <BlogSpotlight />
-        <Spacer />
-
-        <AlignedContainer>
-          <Button to="/blog" label="View All">View All Posts</Button>
-        </AlignedContainer>
-        <Spacer />
-      </Layout>
-    </>
+      <BlogListing />
+      <Spacer />
+    </Layout>
   )
 }
 
 export default Index
-
 
 export const pageQuery = graphql`
   query {

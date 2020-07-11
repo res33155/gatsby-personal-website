@@ -1,43 +1,9 @@
 import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import styled from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Container from "../elements/container"
 import Card from "../elements/card"
 import Grid from "../elements/grid"
-import Spacer from "../elements/spacer"
-
-const Heading = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.025rem;
-  color: var(--gray-900);
-  text-align: center;
-`
-
-// const Button = styled(Link)`
-//   box-sizing: border-box;
-//   border-width: 0;
-//   border-style: solid;
-//   border-color: #e2e8f0;
-//   font-family: inherit;
-//   font-size: 100%;
-//   margin: 0;
-//   overflow: visible;
-//   text-transform: none;
-//   background-image: none;
-//   cursor: pointer;
-//   background-color: var(--blue-700);
-//   border-radius: .25rem;
-//   display: inline-block;
-//   line-height: 1;
-//   padding-top: 1rem;
-//   padding-bottom: 1rem;
-//   padding-left: 2rem;
-//   padding-right: 2rem;
-//   color: #fff;
-//   text-decoration: none;
-// `
 
 const BlogSpotlight = () => {
   const {
@@ -49,7 +15,7 @@ const BlogSpotlight = () => {
       query {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          # limit: 2
+          limit: 3
         ) {
           edges {
             node {
@@ -64,7 +30,7 @@ const BlogSpotlight = () => {
                 coverImageAltText
                 coverImage {
                   childImageSharp {
-                    fluid(maxWidth: 503) {
+                    fluid(maxWidth: 410) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -79,10 +45,6 @@ const BlogSpotlight = () => {
 
   return (
     <Container>
-      <Spacer />
-      <Heading>Latest Posts</Heading>
-      <Spacer />
-
       <Grid>
         {posts.map(({ node }) =>
           <Card
@@ -96,10 +58,6 @@ const BlogSpotlight = () => {
           />
         )}
       </Grid>
-      <Spacer />
-
-      {/* <AllPostsButton to="/blog">View All</AllPostsButton> */}
-      {/* <Spacer /> */}
     </Container>
   )
 }
