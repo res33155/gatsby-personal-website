@@ -16,7 +16,18 @@ const StyledButton = styled(Link)`
   color: var(--blue-100);
   text-decoration: none;
   font-weight: 600;
-  box-shadow: var(--small-shadow);
+  box-shadow: var(--medium-shadow);
+  transition: box-shadow 0.25s ease-in-out;
+
+  &:hover {
+    box-shadow: unset;
+    box-shadow: var(--large-shadow);
+  }
+
+  &:active {
+    box-shadow: unset;
+    box-shadow: var(--small-shadow);
+  }
 `
 
 const Button = ({ to, label, children }) => {

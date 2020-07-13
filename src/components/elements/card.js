@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import { motion } from "framer-motion"
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -16,6 +17,17 @@ const Container = styled.article`
   font-size: 1rem;
   color: var(--black);
   background: var(--white);
+  transition: box-shadow 0.25s ease-in-out;
+
+  &:hover {
+    box-shadow: unset;
+    box-shadow: var(--large-shadow);
+  }
+  
+  &:active {
+    box-shadow: unset;
+    box-shadow: var(--small-shadow);
+  }
 `
 
 const Content = styled.div`
