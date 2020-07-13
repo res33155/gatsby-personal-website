@@ -10,11 +10,16 @@ const BlogList = styled.div`
   background-color: var(--white);
   box-shadow: var(--medium-shadow);
   border-radius: 6px;
+
+  &:last-child {
+    border-bottom: none;
+  }
 `
 
 const BlogListItem = styled.div`
   display: grid;
-  grid-template-columns: 50% 45% 5%;
+  grid-template-columns: 95% 5%;
+  grid-gap: 1rem;
   padding: 1.25rem;
   border-bottom: 1px solid var(--gray-200);
 `
@@ -32,9 +37,11 @@ const Timestamp = styled.span`
   color: var(--gray-600);
 `
 
-
 const Icon = styled.span`
   color: var(--gray-400);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const BlogListing = () => {
@@ -81,9 +88,11 @@ const BlogListing = () => {
         {posts.map(({ node }, index) =>
           <BlogLink to={`${node.fields.slug}`} key={index}>
             <BlogListItem>
-              <Title>{node.frontmatter.title}</Title>
-
-              <Timestamp>Posted {node.frontmatter.date}</Timestamp>
+              <div>
+                <Title>{node.frontmatter.title}</Title>
+                <br />
+                <Timestamp>Posted {node.frontmatter.date}</Timestamp>
+              </div>
 
               <Icon><ion-icon name="chevron-forward"></ion-icon></Icon>
             </BlogListItem>
