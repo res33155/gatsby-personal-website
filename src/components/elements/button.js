@@ -16,17 +16,17 @@ const StyledButton = styled(Link)`
   color: var(--blue-100);
   text-decoration: none;
   font-weight: 600;
-  box-shadow: var(--medium-shadow);
+  box-shadow: var(--small-shadow);
   transition: box-shadow 0.25s ease-in-out;
 
   &:hover {
     box-shadow: unset;
-    box-shadow: var(--large-shadow);
+    box-shadow: var(--medium-shadow);
   }
 
   &:active {
     box-shadow: unset;
-    box-shadow: var(--small-shadow);
+    /* box-shadow: var(--small-shadow); */
   }
 `
 
