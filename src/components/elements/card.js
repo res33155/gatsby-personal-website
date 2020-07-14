@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import { motion } from "framer-motion"
 
 const StyledLink = styled(Link)`
   text-decoration: none;
