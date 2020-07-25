@@ -2,11 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import Layout from "../components/layouts/layout"
-import SEO from "../components/elements/seo"
-import Navigation from "../components/sections/navigation"
-import BlogListing from "../components/sections/blog-listing"
-import Spacer from "../components/elements/spacer"
+import BlogListing from "../components/page-sections/blog-listing"
+import Layout from "../components/common-elements/layout"
+import Navigation from "../components/page-sections/navigation"
+import SEO from "../components/common-elements/seo"
+import Spacer from "../components/common-elements/spacer"
 
 const Heading = styled.h2`
   font-size: 1.5rem;
@@ -16,7 +16,7 @@ const Heading = styled.h2`
   text-align: center;
 `
 
-const Index = ({ data, location }) => {
+const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -34,7 +34,7 @@ const Index = ({ data, location }) => {
   )
 }
 
-export default Index
+export default Blog
 
 export const pageQuery = graphql`
   query {

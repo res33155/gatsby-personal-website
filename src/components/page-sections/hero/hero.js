@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Container from "../elements/container"
+import Container from "../../common-elements/container"
 
 const HeroContainer = styled.div`
   padding-bottom: 3rem;

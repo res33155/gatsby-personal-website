@@ -3,11 +3,11 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layouts/layout"
-import SEO from "../components/elements/seo"
-import Container from "../components/elements/container"
-import Spacer from "../components/elements/spacer"
-import Navigation from "../components/sections/navigation"
+import Layout from "../components/common-elements/layout"
+import SEO from "../components/common-elements/seo"
+import Container from "../components/common-elements/container"
+import Spacer from "../components/common-elements/spacer"
+import Navigation from "../components/page-sections/navigation"
 
 const Typography = createGlobalStyle`
   p {

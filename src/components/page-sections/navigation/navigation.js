@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import Container from "../elements/container"
+import Container from "../../common-elements/container"
 
-import devLogo from "../../images/dev.svg"
-import githubLogo from "../../images/github.svg"
-import linkedinLogo from "../../images/linkedin.svg"
-import twitterLogo from "../../images/twitter.svg"
+import devLogo from "../../../../images/dev.svg"
+import githubLogo from "../../../../images/github.svg"
+import linkedinLogo from "../../../../images/linkedin.svg"
+import twitterLogo from "../../../../images/twitter.svg"
 
 const PageHighlight = styled.div`
   background: var(--green-500);
@@ -26,6 +26,7 @@ const Nav = styled.nav`
   align-items: center;
   background-color: var(--blue-900);
   color: var(--white);
+  font-size: 1.25rem; 
   
   @media (max-width: 576px) {
     flex-direction: column;
@@ -38,15 +39,12 @@ const StyledLink = styled(Link)`
   
 `
 
-const Logo = styled.div`
-  font-size: 1.25rem;
-`
-
 const SocialLinks = styled.div`
   display: flex;
 `
 
 const SocialIcon = styled.div`
+  font-size: 1.5rem;
 
   &:not(:first-of-type) {
     margin-left: 25px;
@@ -70,9 +68,9 @@ const Navigation = () => {
         <PageHighlight />
         <Container>
           <Nav>
-            <Logo>
+            <>
               <StyledLink to="/">Ryan Smith</StyledLink>
-            </Logo>
+            </>
 
             <SocialLinks>
               <SocialIcon>

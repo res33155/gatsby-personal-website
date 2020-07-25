@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Container from "../elements/container"
-import Card from "../elements/card"
-import Grid from "../elements/grid"
+import Container from "../../common-elements/container"
+import Card from "../../common-elements/card"
+import Grid from "../../common-elements/grid"
 
 const BlogSpotlight = () => {
   const {

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
-import Container from "../elements/container"
+import Container from "../../common-elements/container"
 
 const BlogList = styled.div`
   display: flex;
@@ -91,7 +91,7 @@ const BlogListing = () => {
               <div>
                 <Title>{node.frontmatter.title}</Title>
                 <br />
-                <Timestamp>Posted {node.frontmatter.date}</Timestamp>
+                <Timestamp>{node.frontmatter.date}</Timestamp>
               </div>
 
               <Icon><ion-icon name="chevron-forward"></ion-icon></Icon>
