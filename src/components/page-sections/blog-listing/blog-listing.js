@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Container from "../../common-elements/container"
 
-const BlogList = styled.div`
+const StyledBlogList = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--white);
@@ -16,7 +16,7 @@ const BlogList = styled.div`
   }
 `
 
-const BlogListItem = styled.div`
+const StyledBlogListItem = styled.div`
   display: grid;
   grid-template-columns: 95% 5%;
   grid-gap: 1rem;
@@ -24,20 +24,20 @@ const BlogListItem = styled.div`
   border-bottom: 1px solid var(--gray-200);
 `
 
-const BlogLink = styled(Link)`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: var(--black);
 `
 
-const Title = styled.span`
+const StyledTitle = styled.span`
   font-weight: 600;
   color: var(--blue-600);
 `
-const Timestamp = styled.span`
+const StyledTimestamp = styled.span`
   color: var(--gray-600);
 `
 
-const Icon = styled.span`
+const StyledIcon = styled.span`
   color: var(--gray-400);
   display: flex;
   flex-direction: column;
@@ -84,21 +84,21 @@ const BlogListing = () => {
   return (
     <Container>
 
-      <BlogList>
+      <StyledBlogList>
         {posts.map(({ node }, index) =>
-          <BlogLink to={`${node.fields.slug}`} key={index}>
-            <BlogListItem>
+          <StyledLink to={`${node.fields.slug}`} key={index}>
+            <StyledBlogListItem>
               <div>
-                <Title>{node.frontmatter.title}</Title>
+                <StyledTitle>{node.frontmatter.title}</StyledTitle>
                 <br />
-                <Timestamp>{node.frontmatter.date}</Timestamp>
+                <StyledTimestamp>{node.frontmatter.date}</StyledTimestamp>
               </div>
 
-              <Icon><ion-icon name="chevron-forward"></ion-icon></Icon>
-            </BlogListItem>
-          </BlogLink>
+              <StyledIcon><ion-icon name="chevron-forward"></ion-icon></StyledIcon>
+            </StyledBlogListItem>
+          </StyledLink>
         )}
-      </BlogList>
+      </StyledBlogList>
     </Container>
   )
 }
