@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Wrapper = styled.div.attrs(props => ({
+const StyledWrapper = styled.div.attrs(props => ({
   size: props.size === 'small' ? "768px" : "1280px"
 }))` 
   max-width: ${props => props.size};
@@ -11,9 +11,9 @@ const Wrapper = styled.div.attrs(props => ({
 
 const Container = ({ size, children }) => {
   return (
-    <Wrapper size={size}>
+    <StyledWrapper size={size}>
       {children}
-    </Wrapper>
+    </StyledWrapper>
   )
 }
 

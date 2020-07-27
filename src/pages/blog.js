@@ -8,7 +8,7 @@ import Navigation from "../components/page-sections/navigation"
 import SEO from "../components/common-elements/seo"
 import Spacer from "../components/common-elements/spacer"
 
-const Heading = styled.h2`
+const StyledHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.025rem;
@@ -25,7 +25,7 @@ const Blog = ({ data, location }) => {
       <Navigation />
       <Spacer />
 
-      <Heading>Blog Posts</Heading>
+      <StyledHeading>Blog Posts</StyledHeading>
       <Spacer />
 
       <BlogListing />

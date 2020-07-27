@@ -9,7 +9,7 @@ import Container from "../components/common-elements/container"
 import Spacer from "../components/common-elements/spacer"
 import Navigation from "../components/page-sections/navigation"
 
-const Typography = createGlobalStyle`
+const StyledTypography = createGlobalStyle`
   p {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -62,13 +62,13 @@ const Typography = createGlobalStyle`
   }
 `
 
-const Post = styled.div`
+const StyledPost = styled.div`
   background-color: var(--white);
   border-radius: 6px;
   box-shadow: var(--medium-shadow);
 `
 
-const PostContent = styled.div`
+const StyledPostContent = styled.div`
   padding: 25px;
   
   a {
@@ -88,11 +88,11 @@ const PostContent = styled.div`
   }
 `
 
-const CoverImage = styled(Img)`
+const StyledCoverImage = styled(Img)`
   border-radius: 6px 6px 0 0;
 `
 
-const PostNavigation = styled.nav`
+const StyledPostNavigation = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
@@ -107,7 +107,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Typography />
+      <StyledTypography />
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -116,13 +116,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Navigation />
       <Spacer />
       <Container size="small">
-        <Post>
-          <CoverImage
+        <StyledPost>
+          <StyledCoverImage
             sizes={{ ...post?.frontmatter?.coverImage?.childImageSharp?.fluid, aspectRatio: 21 / 9 }}
             alt={post.frontmatter.coverImageAltText}
           />
 
-          <PostContent>
+          <StyledPostContent>
             <article>
               <header>
                 <h1>
@@ -135,7 +135,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <section dangerouslySetInnerHTML={{ __html: post.html }} />
             </article>
 
-            <PostNavigation>
+            <StyledPostNavigation>
               <p>
                 {next && (
                   <>
@@ -162,9 +162,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                   </>
                 )}
               </p>
-            </PostNavigation>
-          </PostContent>
-        </Post>
+            </StyledPostNavigation>
+          </StyledPostContent>
+        </StyledPost>
         <Spacer />
       </Container>
 

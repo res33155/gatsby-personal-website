@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-const Space = styled.div`
+const StyledSpacer = styled.div`
   margin-bottom: 2rem;
 `
 
 const Spacer = () => {
   return (
-    <Space />
+    <StyledSpacer />
   )
 }
 

@@ -10,12 +10,12 @@ import Navigation from "../components/page-sections/navigation"
 import SEO from "../components/common-elements/seo"
 import Spacer from "../components/common-elements/spacer"
 
-const AlignedContainer = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
 `
 
-const Heading = styled.h2`
+const StyledHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.025rem;
@@ -35,15 +35,15 @@ const Home = ({ data, location }) => {
         <Hero />
         <Spacer />
 
-        <Heading>Latest Blog Posts</Heading>
+        <StyledHeading>Latest Blog Posts</StyledHeading>
         <Spacer />
 
         <BlogSpotlight />
         <Spacer />
 
-        <AlignedContainer>
+        <StyledContainer>
           <Button to="/blog" label="View All">View All Posts</Button>
-        </AlignedContainer>
+        </StyledContainer>
         <Spacer />
       </Layout>
     </>

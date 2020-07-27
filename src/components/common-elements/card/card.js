@@ -9,7 +9,7 @@ const StyledLink = styled(Link)`
   display: flex;
 `
 
-const Container = styled.article`
+const StyledContainer = styled.article`
   flex: 1 1 auto;
   border-radius: 6px;
   box-shadow: var(--medium-shadow);
@@ -55,7 +55,7 @@ const Card = ({ link, image, imageAltText, heading, timestamp, content }) => {
   return (
     <>
       <StyledLink to={link} aria-label={heading}>
-        <Container>
+        <StyledContainer>
           <StyledImage
             sizes={{ ...image, aspectRatio: 21 / 9 }}
             alt={imageAltText}
@@ -71,7 +71,7 @@ const Card = ({ link, image, imageAltText, heading, timestamp, content }) => {
 
             <p>{content}</p>
           </Content>
-        </Container>
+        </StyledContainer>
       </StyledLink>
     </>
   )
