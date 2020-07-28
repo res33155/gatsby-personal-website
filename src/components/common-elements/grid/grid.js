@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Container = styled.div`
+const StyledGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
@@ -17,9 +17,9 @@ const Container = styled.div`
 
 const Grid = ({ children }) => {
   return (
-    <Container>
+    <StyledGridContainer>
       {children}
-    </Container>
+    </StyledGridContainer>
   )
 }
 

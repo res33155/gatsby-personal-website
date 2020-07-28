@@ -9,17 +9,17 @@ import githubLogo from "../../../../images/github.svg"
 import linkedinLogo from "../../../../images/linkedin.svg"
 import twitterLogo from "../../../../images/twitter.svg"
 
-const PageHighlight = styled.div`
+const StyledPageHighlight = styled.div`
   background: var(--green-500);
   height: 3px;
 `
 
-const NavContainer = styled.div`
+const StyledNavigationContainer = styled.div`
   background: var(--blue-900);
   color: var(--white);
 `
 
-const Nav = styled.nav`
+const StyledNavigation = styled.nav`
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -39,11 +39,11 @@ const StyledLink = styled(Link)`
   
 `
 
-const SocialLinks = styled.div`
+const StyledSocialLinks = styled.div`
   display: flex;
 `
 
-const SocialIcon = styled.div`
+const StyledSocialIcon = styled.div`
   font-size: 1.5rem;
 
   &:not(:first-of-type) {
@@ -64,42 +64,42 @@ const IconImage = styled.img`
 const Navigation = () => {
   return (
     <>
-      <NavContainer>
-        <PageHighlight />
+      <StyledNavigationContainer>
+        <StyledPageHighlight />
         <Container>
-          <Nav>
+          <StyledNavigation>
             <>
               <StyledLink to="/">Ryan Smith</StyledLink>
             </>
 
-            <SocialLinks>
-              <SocialIcon>
+            <StyledSocialLinks>
+              <StyledSocialIcon>
                 <a href="https://dev.to/ryansmith" aria-label="DEV Community">
                   <IconImage src={devLogo} alt="DEV Community" />
                 </a>
-              </SocialIcon>
+              </StyledSocialIcon>
 
-              <SocialIcon>
+              <StyledSocialIcon>
                 <a href="https://github.com/ryan3E0" aria-label="GitHub">
                   <IconImage src={githubLogo} alt="GitHub" />
                 </a>
-              </SocialIcon>
+              </StyledSocialIcon>
 
-              <SocialIcon>
+              <StyledSocialIcon>
                 <a href="https://www.linkedin.com/in/ryan-smith3/" aria-label="LinkedIn">
                   <IconImage src={linkedinLogo} alt="LinkedIn" />
                 </a>
-              </SocialIcon>
+              </StyledSocialIcon>
 
-              <SocialIcon>
+              <StyledSocialIcon>
                 <a href="https://twitter.com/Ryan3E0" aria-label="Twitter">
                   <IconImage src={twitterLogo} alt="Twitter" />
                 </a>
-              </SocialIcon>
-            </SocialLinks>
-          </Nav>
+              </StyledSocialIcon>
+            </StyledSocialLinks>
+          </StyledNavigation>
         </Container>
-      </NavContainer>
+      </StyledNavigationContainer>
     </>
   )
 }
