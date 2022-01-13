@@ -1,49 +1,35 @@
 {
-  "name": "ryan-smith-personal-website",
-  "private": true,
-  "description": "Ryan Smith's personal website.",
-  "version": "1.0.0",
-  "author": "",
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.24.11",
-    "gatsby-image": "^2.4.13",
-    "gatsby-plugin-feed": "^2.5.11",
-    "gatsby-plugin-manifest": "^2.4.21",
-    "gatsby-plugin-offline": "^3.2.21",
-    "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-plugin-sharp": "^2.6.22",
-    "gatsby-plugin-styled-components": "^3.3.10",
-    "gatsby-remark-copy-linked-files": "^2.3.11",
-    "gatsby-remark-images": "^3.3.21",
-    "gatsby-remark-prismjs": "^3.5.10",
-    "gatsby-remark-responsive-iframe": "^2.4.11",
-    "gatsby-remark-smartypants": "^2.3.10",
-    "gatsby-source-filesystem": "^2.3.23",
-    "gatsby-transformer-remark": "^2.8.27",
-    "gatsby-transformer-sharp": "^2.5.11",
-    "prismjs": "^1.23.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "styled-components": "^5.1.1"
+  "name": "gatsby-personal-website",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "prettier": "2.0.4"
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "sass": "^1.47.0",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.9.4",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
   },
-  "homepage": "http://ryansmith.tech",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryan3E0/gatsby-personal-website.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  "type": "module",
+  "dependencies": {
+    "feather-icons": "^4.28.0"
   }
 }
